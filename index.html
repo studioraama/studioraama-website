@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interior Design Studio in Pune | Home & Office Interiors — studio raama</title>
+  <title>Interior Design Studio in Pune | Home & Office Interiors - studio raama</title>
   <meta name="description" content="studio raama is a top interior design studio in Pune, Maharashtra. Founded by Aman & Radhika, we create stunning residential & commercial interiors. Get a free consultation today.">
   <meta name="keywords" content="interior designer in Pune, interior design studio Pune, home interior design Pune, office interior design Pune Maharashtra, best interior designers Pune, residential interior design Pune, commercial interior design Pune, modular kitchen design Pune, living room interior Pune, flat interior design Pune, studio raama">
   <meta name="author" content="studio raama">
@@ -70,30 +70,50 @@
   <!-- ========== HEADER ========== -->
   <header class="hp-header" id="hpHeader">
     <a href="index.html" class="hp-header__logo">studio raama</a>
-    <div class="hp-header__right">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-        <div class="theme-toggle__track">
-          <div class="theme-toggle__thumb">
-            <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-            <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+    <button class="hp-menu-btn" id="menuToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ========== STANDARD NAV (shows after hero) ========== -->
+  <header class="header hp-nav-full" id="hpNavFull">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo-wrap">
+        <span class="nav__logo">studio raama</span>
+      </a>
+      <ul class="nav__menu" id="navMenuFull">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="what-we-do.html" class="nav__link">What We Do</a></li>
+        <li><a href="our-work.html" class="nav__link">Our Work</a></li>
+        <li><a href="about-us.html" class="nav__link">About Us</a></li>
+        <li><a href="connect.html" class="nav__link nav__link--cta">Connect</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <button class="theme-toggle" id="themeToggle2" aria-label="Toggle dark mode">
+          <div class="theme-toggle__track">
+            <div class="theme-toggle__thumb">
+              <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+              <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+            </div>
           </div>
-        </div>
-      </button>
-      <button class="hp-menu-btn" id="menuToggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+        </button>
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
   </header>
 
   <!-- ========== FULLSCREEN NAV OVERLAY ========== -->
   <div class="nav-overlay" id="navOverlay">
+    <button class="nav-overlay__close" id="navOverlayClose" aria-label="Close menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
     <div class="nav-overlay__content">
       <nav class="nav-overlay__links">
         <a href="index.html" class="nav-overlay__link">Home</a>
         <a href="what-we-do.html" class="nav-overlay__link">What We Do</a>
         <a href="our-work.html" class="nav-overlay__link">Our Work</a>
         <a href="about-us.html" class="nav-overlay__link">About Us</a>
-        <a href="#connect" class="nav-overlay__link">Connect</a>
+        <a href="connect.html" class="nav-overlay__link">Connect</a>
       </nav>
       <div class="nav-overlay__footer">
         <a href="mailto:studioraama@gmail.com" class="nav-overlay__email">studioraama@gmail.com</a>
@@ -107,7 +127,7 @@
     </div>
   </div>
 
-  <!-- ========== HERO — SWIPER CAROUSEL (full-screen, scroll-driven) ========== -->
+  <!-- ========== HERO - SWIPER CAROUSEL (full-screen, scroll-driven) ========== -->
   <section class="hp-hero">
     <div class="swiper hp-swiper" id="heroSwiper">
       <div class="swiper-wrapper">
@@ -131,7 +151,7 @@
           <div class="hp-slide__content">
 
             <h2 class="hp-slide__title">Crafted with warmth, balance, and <em>intention.</em></h2>
-            <p class="hp-slide__desc">Every material, every detail, every corner — designed with purpose and care.</p>
+            <p class="hp-slide__desc">Every material, every detail, every corner - designed with purpose and care.</p>
             <a href="our-work.html" class="hp-slide__btn">Discover</a>
           </div>
         </div>
@@ -143,7 +163,7 @@
           <div class="hp-slide__content">
 
             <h2 class="hp-slide__title">Spaces that tell <em>your story.</em></h2>
-            <p class="hp-slide__desc">Your personality, your lifestyle, your home — we just bring the design.</p>
+            <p class="hp-slide__desc">Your personality, your lifestyle, your home - we just bring the design.</p>
             <a href="our-work.html" class="hp-slide__btn">Discover</a>
           </div>
         </div>
@@ -173,7 +193,7 @@
     <div class="container">
       <div class="mission__inner reveal">
         <h2 class="section-title" data-animate="split-words">crafting <em>spaces,</em><br>creating <em>stories</em></h2>
-        <p class="mission__text">Studio Raama is a boutique interior design studio dedicated to crafting spaces that reflect your personality, lifestyle, and aspirations. We believe that great design goes beyond aesthetics — it should feel personal, functional, and deeply connected to the people who inhabit the space.</p>
+        <p class="mission__text">Studio Raama is a boutique interior design studio dedicated to crafting spaces that reflect your personality, lifestyle, and aspirations. We believe that great design goes beyond aesthetics - it should feel personal, functional, and deeply connected to the people who inhabit the space.</p>
         <p class="mission__text">Founded by Aman and Radhika, Studio Raama brings together modern design sensibilities with thoughtful functionality. Our approach focuses on understanding each client's vision and translating it into interiors that are both beautiful and livable.</p>
         <p class="mission__text">From concept to completion, we carefully curate materials, textures, and details to create spaces that feel balanced, timeless, and uniquely yours. Whether it's a home, workspace, or commercial environment, our goal is to design interiors that inspire comfort, creativity, and everyday living.</p>
       </div>
@@ -183,29 +203,29 @@
   <!-- ========== DIFFERENTIATORS (5-slide pinned) ========== -->
   <section class="diff-section" id="whyUs">
     <!-- Background video -->
-    <video class="diff-section__video" autoplay muted loop playsinline>
+    <video class="diff-section__video" autoplay muted loop playsinline poster="projectgallery/webp/DSC09348-HDR.webp">
       <source src="projectgallery/Photos/table.mp4" type="video/mp4">
     </video>
     <!-- Slide 0: Intro -->
     <div class="diff-slide is-active" data-slide="0">
       <div class="diff-slide__inner">
         <h2 class="diff-slide__title">why <em>choose us</em></h2>
-        <p class="diff-slide__text">We don't just design interiors — we craft experiences. Every space we touch is shaped by deep listening, meticulous detail, and a commitment to making your vision feel effortless.</p>
+        <p class="diff-slide__text">We don't just design interiors - we craft experiences. Every space we touch is shaped by deep listening, meticulous detail, and a commitment to making your vision feel effortless.</p>
       </div>
     </div>
     <!-- Slide 1 -->
     <div class="diff-slide" data-slide="1">
       <span class="diff-slide__num">01</span>
       <div class="diff-slide__inner">
-        <h3 class="diff-slide__heading">Personalized Design Approach</h3>
-        <p class="diff-slide__text">Every project starts with understanding you — your tastes, habits, and aspirations shape every design decision we make.</p>
+        <h3 class="diff-slide__heading">Personalized <em>Design Approach</em></h3>
+        <p class="diff-slide__text">Every project starts with understanding you - your tastes, habits, and aspirations shape every design decision we make.</p>
       </div>
     </div>
     <!-- Slide 2 -->
     <div class="diff-slide" data-slide="2">
       <span class="diff-slide__num">02</span>
       <div class="diff-slide__inner">
-        <h3 class="diff-slide__heading">End-to-End Project Management</h3>
+        <h3 class="diff-slide__heading">End-to-End <em>Project Management</em></h3>
         <p class="diff-slide__text">From initial concept to final handover, we manage every detail so you can sit back and watch your dream space come alive.</p>
       </div>
     </div>
@@ -213,7 +233,7 @@
     <div class="diff-slide" data-slide="3">
       <span class="diff-slide__num">03</span>
       <div class="diff-slide__inner">
-        <h3 class="diff-slide__heading">Curated Material Selection</h3>
+        <h3 class="diff-slide__heading">Curated <em>Material Selection</em></h3>
         <p class="diff-slide__text">Materials, textures, and finishes are carefully chosen to create a cohesive design language.</p>
       </div>
     </div>
@@ -221,7 +241,7 @@
     <div class="diff-slide" data-slide="4">
       <span class="diff-slide__num">04</span>
       <div class="diff-slide__inner">
-        <h3 class="diff-slide__heading">Holistic Interior Styling</h3>
+        <h3 class="diff-slide__heading">Holistic <em>Interior Styling</em></h3>
         <p class="diff-slide__text">Beyond design and execution, we bring the space together through thoughtful staging and styling.</p>
       </div>
     </div>
@@ -236,41 +256,26 @@
   <section class="marquee-section">
     <div class="marquee">
       <div class="marquee__track">
-        <span class="marquee__item">Space Planning</span><span class="marquee__separator">&mdash;</span>
-        <span class="marquee__item">Visualizing & Design</span><span class="marquee__separator">&mdash;</span>
-        <span class="marquee__item">Colour Palette Curation</span><span class="marquee__separator">&mdash;</span>
-        <span class="marquee__item">Material Selection</span><span class="marquee__separator">&mdash;</span>
-        <span class="marquee__item">Customized Furniture</span><span class="marquee__separator">&mdash;</span>
-        <span class="marquee__item">Staging & Styling</span><span class="marquee__separator">&mdash;</span>
-        <span class="marquee__item">Detailed Drawings</span><span class="marquee__separator">&mdash;</span>
-        <span class="marquee__item">Execution & Site Coordination</span><span class="marquee__separator">&mdash;</span>
-        <span class="marquee__item">Turnkey Projects</span><span class="marquee__separator">&mdash;</span>
-        <span class="marquee__item">Bespoke Furniture</span><span class="marquee__separator">&mdash;</span>
-        <span class="marquee__item">Space Planning</span><span class="marquee__separator">&mdash;</span>
-        <span class="marquee__item">Visualizing & Design</span><span class="marquee__separator">&mdash;</span>
-        <span class="marquee__item">Colour Palette Curation</span><span class="marquee__separator">&mdash;</span>
-        <span class="marquee__item">Material Selection</span><span class="marquee__separator">&mdash;</span>
-        <span class="marquee__item">Customized Furniture</span><span class="marquee__separator">&mdash;</span>
-        <span class="marquee__item">Staging & Styling</span><span class="marquee__separator">&mdash;</span>
-        <span class="marquee__item">Detailed Drawings</span><span class="marquee__separator">&mdash;</span>
-        <span class="marquee__item">Execution & Site Coordination</span><span class="marquee__separator">&mdash;</span>
-        <span class="marquee__item">Turnkey Projects</span><span class="marquee__separator">&mdash;</span>
-        <span class="marquee__item">Bespoke Furniture</span><span class="marquee__separator">&mdash;</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== CONNECT ========== -->
-  <section class="connect" id="connect">
-    <div class="container">
-      <div class="connect__inner reveal">
-        <h2>Let's Create Something Beautiful Together</h2>
-        <p>Ready to transform your space? We'd love to hear about your project. Get in touch and let's start the conversation.</p>
-        <div class="connect__actions">
-          <a href="mailto:studioraama@gmail.com" class="btn btn--primary btn--email" data-magnetic>studioraama@gmail.com</a>
-          <a href="https://wa.me/918793737709" class="btn btn--outline" data-magnetic target="_blank" rel="noopener">WhatsApp Us</a>
-          <a href="tel:+918956197709" class="btn btn--outline" data-magnetic>Call: +91 89561 97709</a>
-        </div>
+        <span class="marquee__item">Space Planning</span><span class="marquee__separator">-</span>
+        <span class="marquee__item">Visualizing & Design</span><span class="marquee__separator">-</span>
+        <span class="marquee__item">Colour Palette Curation</span><span class="marquee__separator">-</span>
+        <span class="marquee__item">Material Selection</span><span class="marquee__separator">-</span>
+        <span class="marquee__item">Customized Furniture</span><span class="marquee__separator">-</span>
+        <span class="marquee__item">Staging & Styling</span><span class="marquee__separator">-</span>
+        <span class="marquee__item">Detailed Drawings</span><span class="marquee__separator">-</span>
+        <span class="marquee__item">Execution & Site Coordination</span><span class="marquee__separator">-</span>
+        <span class="marquee__item">Turnkey Projects</span><span class="marquee__separator">-</span>
+        <span class="marquee__item">Bespoke Furniture</span><span class="marquee__separator">-</span>
+        <span class="marquee__item">Space Planning</span><span class="marquee__separator">-</span>
+        <span class="marquee__item">Visualizing & Design</span><span class="marquee__separator">-</span>
+        <span class="marquee__item">Colour Palette Curation</span><span class="marquee__separator">-</span>
+        <span class="marquee__item">Material Selection</span><span class="marquee__separator">-</span>
+        <span class="marquee__item">Customized Furniture</span><span class="marquee__separator">-</span>
+        <span class="marquee__item">Staging & Styling</span><span class="marquee__separator">-</span>
+        <span class="marquee__item">Detailed Drawings</span><span class="marquee__separator">-</span>
+        <span class="marquee__item">Execution & Site Coordination</span><span class="marquee__separator">-</span>
+        <span class="marquee__item">Turnkey Projects</span><span class="marquee__separator">-</span>
+        <span class="marquee__item">Bespoke Furniture</span><span class="marquee__separator">-</span>
       </div>
     </div>
   </section>
@@ -285,7 +290,7 @@
         </div>
         <div class="footer__links">
           <h4>Quick Links</h4>
-          <ul><li><a href="index.html">Home</a></li><li><a href="what-we-do.html">What We Do</a></li><li><a href="our-work.html">Our Work</a></li><li><a href="about-us.html">About Us</a></li><li><a href="index.html#connect">Connect</a></li></ul>
+          <ul><li><a href="index.html">Home</a></li><li><a href="what-we-do.html">What We Do</a></li><li><a href="our-work.html">Our Work</a></li><li><a href="about-us.html">About Us</a></li><li><a href="connect.html">Connect</a></li></ul>
         </div>
         <div class="footer__social">
           <h4>Follow Us</h4>

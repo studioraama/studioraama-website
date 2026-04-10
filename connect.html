@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect With Us | Get in Touch - studio raama</title>
+  <meta name="description" content="Ready to transform your space? Get in touch with studio raama - a boutique interior design studio in Pune. Email, call, or WhatsApp us today.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://studioraama.com/connect.html">
+
+  <meta property="og:title" content="Connect - Get in Touch | studio raama">
+  <meta property="og:description" content="Let's create something beautiful together. Reach out to studio raama for your interior design project.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://studioraama.com/connect.html">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:site_name" content="studio raama">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="service-page.css">
+  <link rel="stylesheet" href="pages.css">
+
+  <style>
+    /* ---------- CONNECT PAGE ---------- */
+    .connect-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Hero split - left dark, right image */
+    .connect-hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 100vh;
+    }
+
+    .connect-hero__left {
+      background: var(--bg-dark-section);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 6rem 5% 4rem 8%;
+    }
+
+    .connect-hero__tag {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 1.5rem;
+    }
+
+    .connect-hero__title {
+      font-family: var(--font-heading);
+      font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--text-on-dark);
+      margin-bottom: 1.5rem;
+    }
+
+    .connect-hero__title em {
+      font-style: italic;
+      font-weight: 300;
+      color: #FFFFFF;
+    }
+
+    .connect-hero__desc {
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--text-on-dark-muted);
+      max-width: 440px;
+      margin-bottom: 3rem;
+    }
+
+    /* Contact details */
+    .connect-details {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    .connect-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      text-decoration: none;
+      color: var(--text-on-dark);
+      transition: color 0.3s;
+    }
+
+    .connect-detail:hover { color: var(--terracotta); }
+
+    .connect-detail__icon {
+      width: 40px;
+      height: 40px;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--terracotta);
+      transition: background 0.3s, border-color 0.3s;
+    }
+
+    .connect-detail:hover .connect-detail__icon {
+      background: var(--terracotta);
+      border-color: var(--terracotta);
+      color: #fff;
+    }
+
+    .connect-detail__label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-on-dark-muted);
+      margin-bottom: 0.2rem;
+    }
+
+    .connect-detail__value {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    /* Social row */
+    .connect-social {
+      display: flex;
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .connect-social a {
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-on-dark-muted);
+      transition: background 0.3s, border-color 0.3s, color 0.3s;
+    }
+
+    .connect-social a:hover {
+      background: var(--terracotta);
+      border-color: var(--terracotta);
+      color: #fff;
+    }
+
+    /* Right side - image */
+    .connect-hero__right {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .connect-hero__right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* Floating quote on the image */
+    .connect-hero__quote {
+      position: absolute;
+      bottom: 3rem;
+      left: 2rem;
+      right: 2rem;
+      background: rgba(28,23,20,0.85);
+      backdrop-filter: blur(8px);
+      padding: 2rem;
+      color: var(--text-on-dark);
+    }
+
+    .connect-hero__quote p {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+    }
+
+    .connect-hero__quote span {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+    }
+
+    /* Location section */
+    .connect-location {
+      background: var(--bg-secondary);
+      padding: 4rem 0;
+    }
+
+    .connect-location__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+    }
+
+    .connect-location__text h3 {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+
+    .connect-location__text p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .connect-location__hours {
+      text-align: right;
+    }
+
+    .connect-location__hours h4 {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .connect-location__hours p {
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .connect-hero {
+        grid-template-columns: 1fr;
+      }
+
+      .connect-hero__left {
+        padding: 7rem 6% 4rem;
+        order: 1;
+      }
+
+      .connect-hero__right {
+        height: 50vh;
+        order: 0;
+      }
+
+      .connect-hero__quote {
+        bottom: 1.5rem;
+        left: 1rem;
+        right: 1rem;
+        padding: 1.25rem;
+      }
+
+      .connect-location__inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .connect-location__hours { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor" id="cursor">
+    <div class="cursor__dot"></div>
+    <div class="cursor__ring"></div>
+  </div>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- NAVIGATION -->
+  <header class="header scrolled" id="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav__logo-wrap">
+        <span class="nav__logo">studio raama</span>
+      </a>
+      <ul class="nav__menu" id="navMenu">
+        <button class="nav__close" id="navClose" aria-label="Close menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="what-we-do.html" class="nav__link">What We Do</a></li>
+        <li><a href="our-work.html" class="nav__link">Our Work</a></li>
+        <li><a href="about-us.html" class="nav__link">About Us</a></li>
+        <li><a href="connect.html" class="nav__link active nav__link--cta">Connect</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <div class="theme-toggle__track">
+            <div class="theme-toggle__thumb">
+              <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+              <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+            </div>
+          </div>
+        </button>
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- CONNECT PAGE -->
+  <div class="connect-page">
+    <section class="connect-hero">
+
+      <!-- Left: dark panel with contact info -->
+      <div class="connect-hero__left">
+        <p class="connect-hero__tag">Get in Touch</p>
+        <h1 class="connect-hero__title">let's create something <em>beautiful together.</em></h1>
+        <p class="connect-hero__desc">Ready to transform your space? We'd love to hear about your project. Reach out and let's start the conversation.</p>
+
+        <div class="connect-details">
+          <a href="mailto:studioraama@gmail.com" class="connect-detail">
+            <div class="connect-detail__icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <p class="connect-detail__label">Email</p>
+              <p class="connect-detail__value">studioraama@gmail.com</p>
+            </div>
+          </a>
+
+          <a href="tel:+918793737709" class="connect-detail">
+            <div class="connect-detail__icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <p class="connect-detail__label">Phone</p>
+              <p class="connect-detail__value">+91 87937 37709</p>
+            </div>
+          </a>
+
+          <a href="https://wa.me/918793737709" class="connect-detail" target="_blank" rel="noopener">
+            <div class="connect-detail__icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
+            </div>
+            <div>
+              <p class="connect-detail__label">WhatsApp</p>
+              <p class="connect-detail__value">Chat with us</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="connect-social">
+          <a href="https://www.instagram.com/studio.raama" aria-label="Instagram" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://www.facebook.com/share/18JKxabJm5/" aria-label="Facebook" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="https://pin.it/7C3vo6DcH" aria-label="Pinterest" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345c-.091.379-.293 1.194-.333 1.361-.052.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg></a>
+          <a href="https://www.threads.com/@studio.raama" aria-label="Threads" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.34-.779-.963-1.4-1.79-1.824-.357 2.387-1.116 4.142-2.305 5.114-.95.776-2.105 1.14-3.39 1.14h-.07c-1.104-.013-2.05-.404-2.726-1.134-.646-.698-.988-1.634-.988-2.7 0-2.359 1.776-4.491 4.37-4.491 1.234 0 2.196.378 2.86 1.124.315.353.543.78.672 1.253.34-.05.665-.084.974-.1-.078-.736-.298-1.4-.66-1.973-1.024-1.618-2.872-2.507-5.204-2.507l-.129.001c-2.095.037-3.854.77-5.088 2.12C3.754 8.384 3.06 10.07 3.06 12c0 1.93.694 3.616 2.009 4.88 1.234 1.186 2.906 1.838 4.845 1.896.054.001.108.001.162.001 1.7 0 3.098-.472 4.158-1.405.89-.783 1.457-1.9 1.746-3.277a5.856 5.856 0 01-.97.082c-.334 0-.678-.027-1.028-.083a3.089 3.089 0 01-.198 1.07c-.374.88-1.173 1.496-2.393 1.496h-.038c-.635-.007-1.16-.196-1.52-.549-.327-.32-.5-.768-.5-1.296 0-1.394 1.14-2.543 2.486-2.543.647 0 1.143.174 1.476.518.164.169.278.384.34.635.363.014.713.052 1.047.112.02-.114.034-.23.043-.35.014-.164.02-.335.017-.512-.01-.528-.117-1.013-.32-1.44-.576-1.213-1.76-1.884-3.34-1.894h-.1c-1.635.027-2.975.547-3.876 1.506-.89.947-1.36 2.273-1.36 3.834 0 1.496.468 2.794 1.353 3.752.91.985 2.189 1.525 3.695 1.562h.072c1.604 0 2.925-.512 3.93-1.524 1.225-1.232 1.832-3.059 1.832-5.458v-.049a8.12 8.12 0 012.194 2.162c.727 1.065 1.068 2.378.743 3.865-.392 1.792-1.45 3.236-3.062 4.168C17.146 23.384 14.94 23.98 12.186 24z"/></svg></a>
+        </div>
+      </div>
+
+      <!-- Right: project image with floating quote -->
+      <div class="connect-hero__right">
+        <img src="projectgallery/webp/DSC09321-HDR.webp" alt="Studio Raama - Interior Design" loading="eager">
+        <div class="connect-hero__quote">
+          <p>"Every space has a story waiting to be told. Our role is to listen carefully, understand deeply, and design thoughtfully."</p>
+          <span>- studio raama</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Location bar -->
+    <section class="connect-location">
+      <div class="container">
+        <div class="connect-location__inner">
+          <div class="connect-location__text">
+            <h3>Based in Pune, Maharashtra</h3>
+            <p>Serving clients across Pune and beyond.</p>
+          </div>
+          <div class="connect-location__hours">
+            <h4>Working Hours</h4>
+            <p>Mon - Sat: 10:00 AM - 7:00 PM</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">studio raama</a>
+          <p class="footer__tagline">Turning everyday spaces into heartfelt homes.</p>
+        </div>
+        <div class="footer__links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="what-we-do.html">What We Do</a></li>
+            <li><a href="our-work.html">Our Work</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="connect.html">Connect</a></li>
+          </ul>
+        </div>
+        <div class="footer__social">
+          <h4>Follow Us</h4>
+          <div class="footer__icons">
+            <a href="https://www.instagram.com/studio.raama" aria-label="Instagram" target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://www.facebook.com/share/18JKxabJm5/" aria-label="Facebook" target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+            <a href="https://pin.it/7C3vo6DcH" aria-label="Pinterest" target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345c-.091.379-.293 1.194-.333 1.361-.052.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg></a>
+            <a href="https://www.threads.com/@studio.raama" aria-label="Threads" target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.34-.779-.963-1.4-1.79-1.824-.357 2.387-1.116 4.142-2.305 5.114-.95.776-2.105 1.14-3.39 1.14h-.07c-1.104-.013-2.05-.404-2.726-1.134-.646-.698-.988-1.634-.988-2.7 0-2.359 1.776-4.491 4.37-4.491 1.234 0 2.196.378 2.86 1.124.315.353.543.78.672 1.253.34-.05.665-.084.974-.1-.078-.736-.298-1.4-.66-1.973-1.024-1.618-2.872-2.507-5.204-2.507l-.129.001c-2.095.037-3.854.77-5.088 2.12C3.754 8.384 3.06 10.07 3.06 12c0 1.93.694 3.616 2.009 4.88 1.234 1.186 2.906 1.838 4.845 1.896.054.001.108.001.162.001 1.7 0 3.098-.472 4.158-1.405.89-.783 1.457-1.9 1.746-3.277a5.856 5.856 0 01-.97.082c-.334 0-.678-.027-1.028-.083a3.089 3.089 0 01-.198 1.07c-.374.88-1.173 1.496-2.393 1.496h-.038c-.635-.007-1.16-.196-1.52-.549-.327-.32-.5-.768-.5-1.296 0-1.394 1.14-2.543 2.486-2.543.647 0 1.143.174 1.476.518.164.169.278.384.34.635.363.014.713.052 1.047.112.02-.114.034-.23.043-.35.014-.164.02-.335.017-.512-.01-.528-.117-1.013-.32-1.44-.576-1.213-1.76-1.884-3.34-1.894h-.1c-1.635.027-2.975.547-3.876 1.506-.89.947-1.36 2.273-1.36 3.834 0 1.496.468 2.794 1.353 3.752.91.985 2.189 1.525 3.695 1.562h.072c1.604 0 2.925-.512 3.93-1.524 1.225-1.232 1.832-3.059 1.832-5.458v-.049a8.12 8.12 0 012.194 2.162c.727 1.065 1.068 2.378.743 3.865-.392 1.792-1.45 3.236-3.062 4.168C17.146 23.384 14.94 23.98 12.186 24z"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom"><p>&copy; 2026 studio raama. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>

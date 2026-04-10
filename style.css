@@ -113,7 +113,7 @@ body {
 
 body.loading {
   overflow: hidden;
-  height: 100vh;
+  height: 100%;
 }
 
 img { max-width: 100%; height: auto; display: block; }
@@ -711,6 +711,7 @@ div.service-card {
   position: relative;
   width: 100%;
   height: 100vh;
+  height: 100dvh;
   overflow: hidden;
   background: #1C1714;
 }
@@ -721,6 +722,7 @@ div.service-card {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 35%;
   z-index: 0;
 }
 
@@ -775,32 +777,29 @@ div.service-card {
 .diff-slide[data-slide="0"] .diff-slide__title em {
   font-style: italic;
   font-weight: 300;
-  color: var(--terracotta);
+  color: #FFFFFF;
 }
 
-/* Large floating number — slides 1-4 */
+/* Large floating number — hidden */
 .diff-slide__num {
-  position: absolute;
-  font-family: var(--font-heading);
-  font-size: clamp(10rem, 25vw, 20rem);
-  font-weight: 700;
-  color: rgba(255,255,255,0.04);
-  line-height: 1;
-  pointer-events: none;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  display: none;
 }
 
 /* Feature heading */
 .diff-slide__heading {
   font-family: var(--font-heading);
-  font-size: clamp(1.6rem, 3.5vw, 2.5rem);
+  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.01em;
   color: var(--text-on-dark);
   margin-bottom: 1.25rem;
+}
+
+.diff-slide__heading em {
+  font-style: italic;
+  font-weight: 300;
+  color: #FFFFFF;
 }
 
 /* Slide body text */
@@ -809,7 +808,8 @@ div.service-card {
   font-size: clamp(0.95rem, 1.3vw, 1.1rem);
   font-weight: 300;
   line-height: 1.8;
-  color: var(--text-on-dark-muted);
+  color: #FFFFFF;
+  font-weight: 500;
   max-width: 560px;
   margin: 0 auto;
 }
@@ -1676,8 +1676,12 @@ div.service-card {
 
   /* DIFFERENTIATORS */
   .differentiators { padding: 4rem 0; }
-  .diff-section { height: 100vh; }
+  .diff-section { height: auto; min-height: auto; overflow: visible; }
+  .diff-slide { position: relative; opacity: 1; pointer-events: auto; min-height: 70vh; padding: 3rem 5%; }
   .diff-slide__heading { font-size: clamp(1.4rem, 5vw, 2rem); }
+  .diff-slide__title { font-size: clamp(1.8rem, 7vw, 2.5rem) !important; }
+  .diff-section__video { display: none; }
+  .diff-section::before { position: relative; }
 
   /* PORTFOLIO */
   .portfolio { padding: 4rem 0 2rem; }

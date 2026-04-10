@@ -55,12 +55,20 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Custom wheel handler — full control over slide vs page scroll
+    // Custom wheel handler — desktop only (touch devices use Swiper's native touch)
+    const isTouchDev = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
     let isAnimating = false;
     let lastScrollTime = 0;
 
+    if (isTouchDev) {
+      // On mobile/touch: let Swiper handle touch natively, enable releaseOnEdges
+      heroSwiper.params.allowTouchMove = true;
+      heroSwiper.params.touchReleaseOnEdges = true;
+    }
+
     heroEl.addEventListener('wheel', (e) => {
-      // Only intercept when hero is at top of viewport
+      // Only intercept on desktop when hero is at top of viewport
+      if (isTouchDev) return;
       if (window.scrollY > 10) return;
 
       const now = Date.now();
@@ -132,23 +140,54 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    links.forEach(link => link.addEventListener('click', () => {
+    // Close button inside overlay
+    const closeBtn = document.getElementById('navOverlayClose');
+    function closeOverlay() {
       overlay.classList.remove('active');
       btn.classList.remove('active');
       document.body.style.overflow = '';
-    }));
+    }
+
+    if (closeBtn) closeBtn.addEventListener('click', closeOverlay);
+    links.forEach(link => link.addEventListener('click', closeOverlay));
+
+    // Safety: reset overflow on page visibility change (prevents stuck state)
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) closeOverlay();
+    });
   }
 
   /* ========== HEADER SCROLL ========== */
   function initHeaderScroll() {
     const hpH = document.getElementById('hpHeader');
-    if (hpH) {
-      window.addEventListener('scroll', () => hpH.classList.toggle('scrolled', window.scrollY > window.innerHeight - 100));
+    const hpNavFull = document.getElementById('hpNavFull');
+    const menuBtn = document.getElementById('menuToggle');
+
+    if (hpH && hpNavFull) {
+      // Homepage: swap between hamburger header and full nav
+      window.addEventListener('scroll', () => {
+        const pastHero = window.scrollY > window.innerHeight - 100;
+        hpH.classList.toggle('scrolled', pastHero);
+        hpH.classList.toggle('hide-on-scroll', pastHero);
+        hpNavFull.classList.toggle('visible', pastHero);
+        if (menuBtn) menuBtn.classList.toggle('hide-on-scroll', pastHero);
+      });
     }
+
     // Legacy header for other pages
     const legH = document.getElementById('header');
     if (legH && document.querySelector('.hero')) {
       window.addEventListener('scroll', () => legH.classList.toggle('scrolled', window.scrollY > 80));
+    }
+
+    // Second theme toggle (in full nav)
+    const themeToggle2 = document.getElementById('themeToggle2');
+    if (themeToggle2) {
+      themeToggle2.addEventListener('click', () => {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        if (isDark) { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('studiorama-theme', 'light'); }
+        else { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('studiorama-theme', 'dark'); }
+      });
     }
   }
 
@@ -204,7 +243,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function initSectionAnimations() {
     // Slow down the diff section background video
     const diffVideo = document.querySelector('.diff-section__video');
-    if (diffVideo) diffVideo.playbackRate = 0.4;
+    if (diffVideo) diffVideo.playbackRate = 0.2;
 
     // Tag slide-in
     document.querySelectorAll('[data-animate="tag-slide"]').forEach(tag => {
@@ -225,6 +264,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const diffCounterCur = document.querySelector('.diff-counter__cur');
 
     if (diffSection && diffSlides.length) {
+      const isMobile = window.innerWidth <= 768;
+
+      // On mobile: show all slides stacked, no pinning
+      if (isMobile) {
+        diffSlides.forEach(s => { s.classList.add('is-active'); s.style.position = 'relative'; s.style.opacity = '1'; });
+        if (diffProgressBar) diffProgressBar.parentElement.style.display = 'none';
+        const counter = document.querySelector('.diff-counter');
+        if (counter) counter.style.display = 'none';
+        diffSection.style.height = 'auto';
+      }
+
+      if (isMobile) return; // skip pinning on mobile
+
       let currentDiff = 0;
       const totalSlides = diffSlides.length;
 
