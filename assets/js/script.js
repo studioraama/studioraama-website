@@ -360,7 +360,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Footer
     const footer = document.querySelector('.footer');
-    if (footer) gsap.fromTo(footer, { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 1, ease: 'power2.out', scrollTrigger: { trigger: footer, start: 'top 90%', once: true } });
+    if (footer) gsap.fromTo(footer, { opacity: 0 }, { opacity: 1, duration: 1, ease: 'power2.out', scrollTrigger: { trigger: footer, start: 'top 90%', once: true } });
   }
 
   /* ========== LEGACY: Hero slider (other pages) ========== */

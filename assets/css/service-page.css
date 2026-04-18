@@ -2,10 +2,15 @@
    SERVICE PAGE STYLES
    =========================== */
 
-/* Ensure service pages always scroll */
-html, body {
+/* Ensure service pages always scroll — body overflow: visible so it is never
+   a scroll container; html handles page-level vertical scroll. */
+html {
   overflow-y: auto !important;
   height: auto !important;
+}
+body {
+  height: auto !important;
+  overflow: visible !important;
 }
 
 /* Service page highlights — 3 columns */

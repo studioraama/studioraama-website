@@ -292,9 +292,10 @@
       }
 
       .connect-hero__right {
-        height: 55vw;
-        min-height: 240px;
-        max-height: 380px;
+        height: auto;
+        aspect-ratio: 4 / 5;
+        min-height: unset;
+        max-height: unset;
         order: 0;
       }
 
@@ -340,8 +341,7 @@
 
     @media (max-width: 480px) {
       .connect-hero__right {
-        height: 60vw;
-        min-height: 220px;
+        aspect-ratio: 3 / 4;
       }
 
       .connect-hero__left {
