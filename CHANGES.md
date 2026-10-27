@@ -34,7 +34,7 @@ Add changes below. Mark status as you go.
 - [x] 5a. Space is italic in "Space Planning"
 - [x] 5b. Remove "Read more" from What We Do service cards
 - [x] 6. 2-3 client reviews added (placeholder text — replace with genuine reviews when available)
-- [ ] 7. Founder photos — waiting for photos from client via WhatsApp
+- [x] 7. Founder photos — updated with client-provided photos (27.10.26)
 - [x] 8. Founder bios updated with client-provided content
 - [x] 9. Email in lowercase, Poppins font throughout, WhatsApp button same
 - [x] 10. Threads and Pinterest icons updated to actual brand SVG logos
@@ -44,6 +44,5 @@ Add changes below. Mark status as you go.
 ## Pending Items (Need Client Input)
 
 - Actual logo images for India Design World and Home Publication
-- Founder photos (client to send via WhatsApp)
 - Project gallery images for each project (Earthy Abode, Calm Nest, Bohemian Edit)
 - Genuine client review text with names
